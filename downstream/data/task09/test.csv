@@ -1,0 +1,11 @@
+img_filename,mask_filename,partition
+spleen_29.nii.gz,spleen_29.nii.gz,test
+spleen_56.nii.gz,spleen_56.nii.gz,test
+spleen_46.nii.gz,spleen_46.nii.gz,test
+spleen_17.nii.gz,spleen_17.nii.gz,test
+spleen_9.nii.gz,spleen_9.nii.gz,test
+spleen_47.nii.gz,spleen_47.nii.gz,test
+spleen_62.nii.gz,spleen_62.nii.gz,test
+spleen_22.nii.gz,spleen_22.nii.gz,test
+spleen_44.nii.gz,spleen_44.nii.gz,test
+spleen_27.nii.gz,spleen_27.nii.gz,test

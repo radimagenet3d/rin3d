@@ -1,0 +1,6 @@
+img_filename,mask_filename,partition
+la_024.nii.gz,la_024.nii.gz,test
+la_022.nii.gz,la_022.nii.gz,test
+la_005.nii.gz,la_005.nii.gz,test
+la_018.nii.gz,la_018.nii.gz,test
+la_019.nii.gz,la_019.nii.gz,test

@@ -1,0 +1,11 @@
+img_filename,mask_filename,partition
+la_007.nii.gz,la_007.nii.gz,train
+la_021.nii.gz,la_021.nii.gz,train
+la_023.nii.gz,la_023.nii.gz,train
+la_003.nii.gz,la_003.nii.gz,train
+la_020.nii.gz,la_020.nii.gz,train
+la_009.nii.gz,la_009.nii.gz,train
+la_026.nii.gz,la_026.nii.gz,train
+la_011.nii.gz,la_011.nii.gz,train
+la_029.nii.gz,la_029.nii.gz,train
+la_004.nii.gz,la_004.nii.gz,train

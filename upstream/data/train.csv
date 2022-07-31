@@ -1,0 +1,10 @@
+filename,label,pathology,partition,modality,anatomy
+1003.mha,0,covid,train,ct,lung
+BraTS2021_00017_flair.nii.gz,1,glioma,train,mri,brain
+case_00004.nii.gz,3,kidney_tumor,train,ct,kidney
+case_00007.nii.gz,3,kidney_tumor,train,ct,kidney
+hippocampus_001.nii.gz,2,hippocampus,train,ct,liver
+hippocampus_003.nii.gz,2,hippocampus,train,ct,liver
+liver_0.nii.gz,4,liver_tumor,train,ct,liver
+prostate_18.nii.gz,5,prostate_tumor,train,mri,prostate
+prostate_37.nii.gz,5,prostate_tumor,train,mri,prostate

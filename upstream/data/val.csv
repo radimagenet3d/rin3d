@@ -1,0 +1,5 @@
+filename,label,pathology,partition,modality,anatomy
+105_.nrrd,6,thyroid_nodule,val,us,thyroid
+10190.mha,0,covid,val,ct,lung
+BraTS2021_00018_flair.nii.gz,1,glioma,val,mri,brain
+liver_45.nii.gz,4,liver_tumor,val,ct,liver

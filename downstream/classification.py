@@ -244,6 +244,7 @@ def get_estimator(data_path,
                   epochs=20,
                   init_lr=1e-4,
                   log_steps=20,
+                  num_class=1,
                   train_steps_per_epoch=None):
     ds_train = CSVDataset(os.path.join(csv_path, "train.csv"))
     ds_val = CSVDataset(os.path.join(csv_path, "val.csv"))
@@ -270,7 +271,7 @@ def get_estimator(data_path,
         backbone = fe.build(model_fn=lambda: R50TorchVideoEncoder(pretrain=pretrain, weight_path=weight_path),
                             optimizer_fn=lambda x: torch.optim.Adam(x, lr=init_lr),
                             model_name="backbone")
-    classifier = fe.build(model_fn=Classifier,
+    classifier = fe.build(model_fn=Classifier(num_class=num_class),
                           optimizer_fn=lambda x: torch.optim.Adam(x, lr=init_lr),
                           model_name="classifier")
     network = fe.Network(ops=[

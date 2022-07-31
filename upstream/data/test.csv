@@ -1,0 +1,4 @@
+filename,label,pathology,partition,modality,anatomy
+BraTS2021_00019_flair.nii.gz,1,glioma,test,mri,brain
+hippocampus_004.nii.gz,2,hippocampus,test,ct,liver
+100_.nrrd,6,thyroid_nodule,test,us,thyroid

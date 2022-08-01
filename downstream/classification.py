@@ -271,7 +271,7 @@ def get_estimator(data_path,
         backbone = fe.build(model_fn=lambda: R50TorchVideoEncoder(pretrain=pretrain, weight_path=weight_path),
                             optimizer_fn=lambda x: torch.optim.Adam(x, lr=init_lr),
                             model_name="backbone")
-    classifier = fe.build(model_fn=Classifier(num_class=num_class),
+    classifier = fe.build(model_fn=lambda: Classifier(num_class=num_class),
                           optimizer_fn=lambda x: torch.optim.Adam(x, lr=init_lr),
                           model_name="classifier")
     network = fe.Network(ops=[

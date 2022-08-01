@@ -8,7 +8,6 @@ import torch
 import torch.nn as nn
 from medpy.io import load as load_mha
 from scipy.ndimage import zoom
-from sklearn import metrics
 
 import fastestimator as fe
 from fastestimator.dataset import CSVDataset
@@ -16,7 +15,7 @@ from fastestimator.op.numpyop.numpyop import Delete, NumpyOp
 from fastestimator.op.tensorop.loss import CrossEntropy
 from fastestimator.op.tensorop.model import ModelOp, UpdateOp
 from fastestimator.trace.io import BestModelSaver
-from fastestimator.trace.metric import Accuracy
+from fastestimator.trace.metric import Accuracy, MCC
 
 
 class ReadImage(NumpyOp):
@@ -159,6 +158,7 @@ def get_estimator(data_path,
     ])
     traces = [
         Accuracy(true_key="label", pred_key="pred"),
+        MCC(true_key="label", pred_key="pred"),
         BestModelSaver(model=backbone, save_dir=output_dir, metric="accuracy", save_best_mode="max"),
         BestModelSaver(model=classifier, save_dir=output_dir, metric="accuracy", save_best_mode="max")
     ]

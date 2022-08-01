@@ -1,6 +1,5 @@
 import os
 import pdb
-from turtle import forward
 
 import nibabel
 import numpy as np

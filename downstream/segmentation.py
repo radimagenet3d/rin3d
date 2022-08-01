@@ -1,5 +1,6 @@
 import os
 import pdb
+from turtle import forward
 
 import nibabel
 import numpy as np
@@ -42,6 +43,13 @@ class Rescale(NumpyOp):
         img_data = data
         img_data = (img_data - img_data.min()) / (img_data.max() - img_data.min())
         return np.float32(img_data)
+
+
+class BinaryMask(NumpyOp):
+    def forward(self, data, state):
+        mask_data = data
+        mask_data[mask_data >= 1] = 1
+        return np.int32(mask_data)
 
 
 class AddChannel(NumpyOp):
@@ -310,6 +318,7 @@ def get_estimator(data_path,
         ops=[
             ReadImage(parent_path=os.path.join(data_path, "image"), inputs="img_filename", outputs="image_data"),
             ReadImage(parent_path=os.path.join(data_path, "label"), inputs="mask_filename", outputs="mask_data"),
+            BinaryMask(inputs="mask_data", outputs="mask_data"),
             Resize3D(inputs="image_data", outputs="image_data"),
             Resize3D(inputs="mask_data", outputs="mask_data"),
             Rescale(inputs="image_data", outputs="image_data"),
